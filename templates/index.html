@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Chat Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="chat-app">
+    <header class="chat-header">
+      <h1>AI Chat Assistant</h1>
+      <button id="reset-btn" type="button">New chat</button>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite"></main>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        id="message-input"
+        type="text"
+        placeholder="Ask me anything..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
